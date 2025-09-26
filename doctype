@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cooking — My Favorite Hobby</title>
+  <meta name="description" content="A clean single-page layout about cooking, using semantic HTML and accessibility best practices." />
+  <style>
+    /* Simple, lightweight styles for clarity and readability */
+    :root{--max:900px;--accent:#c94f1a;--muted:#666}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;line-height:1.5;color:#111;margin:0;padding:0;display:flex;justify-content:center}
+    .page{max-width:var(--max);padding:28px}
+    header{border-bottom:1px solid #eee;padding-bottom:18px;margin-bottom:22px}
+    nav ul{list-style:none;padding:0;margin:0;display:flex;gap:12px}
+    nav a{color:var(--accent);text-decoration:none;font-weight:600}
+    main{display:grid;grid-template-columns:1fr 280px;gap:24px}
+    .content{min-width:0}
+    section{margin-bottom:18px}
+    h1{font-size:1.6rem;margin:0}
+    h2{font-size:1.1rem;margin:6px 0}
+    p{margin:0 0 10px}
+    .card{border:1px solid #eee;padding:12px;border-radius:8px;background:#fafafa}
+    footer{border-top:1px solid #eee;margin-top:24px;padding-top:12px;font-size:0.9rem;color:var(--muted)}
+    figure{margin:0}
+    img{max-width:100%;height:auto;border-radius:6px}
+    @media (max-width:880px){main{grid-template-columns:1fr} .page{padding:16px}}
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Version 1: Written entirely by the user (no Copilot) -->
+    <!-- This section demonstrates a simple semantic single-page layout about cooking -->
+    <header role="banner">
+      <h1>Cooking — My Favorite Hobby</h1>
+      <p style="color:var(--muted);margin-top:6px">Exploring recipes, techniques, and moments around the stove.</p>
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#recipes">Recipes</a></li>
+          <li><a href="#techniques">Techniques</a></li>
+          <li><a href="#resources">Resources</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="content">
+        <section id="about" aria-labelledby="about-heading">
+          <h2 id="about-heading">Why I Love Cooking</h2>
+          <article>
+            <p>Cooking is my favorite hobby because it combines creativity with science. I enjoy testing flavor combinations, learning new methods, and sharing meals with friends and family. Every dish teaches me something — about balance, timing, and patience.</p>
+          </article>
+        </section>
+
+        <section id="recipes" aria-labelledby="recipes-heading">
+          <h2 id="recipes-heading">Favorite Recipes</h2>
+          <article class="card">
+            <h3>1. Spiced Tomato Pasta</h3>
+            <p>A simple, comforting pasta made with roasted tomatoes, garlic, and a pinch of chili. Perfect for weeknights.</p>
+          </article>
+
+          <article class="card" style="margin-top:12px">
+            <h3>2. Lemon Herb Chicken</h3>
+            <p>Marinated in citrus and herbs, then roasted until golden — bright, fragrant, and easy to prepare.</p>
+          </article>
+        </section>
+
+        <section id="techniques" aria-labelledby="techniques-heading">
+          <h2 id="techniques-heading">Techniques I Practice</h2>
+          <ul>
+            <li>Sautéing and deglazing to build flavor.</li>
+            <li>Roasting vegetables to concentrate sweetness.</li>
+            <li>Balancing acid, fat, salt, and heat for a rounded dish.</li>
+          </ul>
+        </section>
+
+        <section id="story" aria-labelledby="story-heading">
+          <h2 id="story-heading">A Small Cooking Story</h2>
+          <p>One evening I tried a new spice blend and accidentally added too much chili — instead of throwing it out, I balanced it with yogurt and lemon. The mistake turned into an unexpectedly brilliant sauce. That taught me: cooking rewards experimentation and rescue.</p>
+        </section>
+
+      </div>
+
+      <aside aria-labelledby="aside-heading" class="card">
+        <h2 id="aside-heading">Quick Tips & Tools</h2>
+        <ul>
+          <li>Invest in a good chef's knife.</li>
+          <li>Keep a small spice jar for quick seasoning adjustments.</li>
+          <li>Use a thermometer for perfect roasts.</li>
+        </ul>
+
+        <figure>
+          <img src="https://images.unsplash.com/photo-1512058564366-c9e3f8f1f3b7?auto=format&fit=crop&w=800&q=60" alt="Cutting board with vegetables and herbs">
+          <figcaption>Fresh ingredients make the best meals.</figcaption>
+        </figure>
+      </aside>
+    </main>
+
+    <footer role="contentinfo">
+      <p>Version 1 — Written solely by the user. Page built with semantic HTML: header, nav, main, section, article, aside, footer, figure.</p>
+      <p>© Cooking Hobby • Created for a single-page HTML exercise.</p>
+    </footer>
+
+    <!-- Divider between versions -->
+    <hr style="margin:28px 0;border:none;border-top:1px solid #eee">
+
+    <!-- Version 2: Start of Copilot-assisted version -->
+    <!-- Copilot prompts are included as meaningful HTML comments below. -->
+    <!-- Copilot Prompt 1: "Create a clean, accessible single-page HTML layout about cooking. Use semantic tags (header, nav, main, section, article, aside, footer). Include an image with alt text, a recipe list, and a small sidebar with tips. Make the layout responsive. Keep CSS minimal and include comments for accessibility." -->
+    <!-- Copilot Prompt 2: "Add ARIA labels for landmarks, ensure keyboard navigation works, and include a visually-hidden skip link to main content." -->
+
+    <header role="banner" aria-label="Cooking page header" style="margin-top:18px">
+      <!-- Copilot: Add a skip link to main content for keyboard users -->
+      <a class="sr-only" href="#copilot-main" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden">Skip to main content</a>
+      <h1>Cooking (Copilot Version)</h1>
+      <nav aria-label="Main" role="navigation">
+        <!-- Copilot: Generate responsive nav with anchor links to sections -->
+        <ul>
+          <li><a href="#copilot-about">About</a></li>
+          <li><a href="#copilot-recipes">Recipes</a></li>
+          <li><a href="#copilot-techniques">Techniques</a></li>
+          <li><a href="#copilot-resources">Resources</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="copilot-main" role="main">
+      <section id="copilot-about" aria-labelledby="copilot-about-h">
+        <h2 id="copilot-about-h">About Cooking</h2>
+        <p>Cooking blends science and creativity — adjusting heat, timing, and seasoning results in meals that bring people together. Below are curated recipes and practical techniques to try at home.</p>
+      </section>
+
+      <section id="copilot-recipes" aria-labelledby="copilot-recipes-h">
+        <h2 id="copilot-recipes-h">Recipes to Try</h2>
+        <article>
+          <h3>One-pan Harissa Chicken</h3>
+          <p>Roast chicken with vegetables and harissa paste for a flavorful, low-effort meal.</p>
+        </article>
+
+        <article>
+          <h3>Chickpea & Spinach Curry</h3>
+          <p>A vegetarian curry that's quick, nutritious, and full of spices. Serve with rice or flatbread.</p>
+        </article>
+      </section>
+
+      <section id="copilot-techniques" aria-labelledby="copilot-techniques-h">
+        <h2 id="copilot-techniques-h">Techniques</h2>
+        <ol>
+          <li>Build layers of flavor: sweat onions, toast spices, deglaze the pan.</li>
+          <li>Use resting time for meats to keep them juicy.</li>
+          <li>Taste early and often — adjust with acid (vinegar, lemon) and fat (butter, oil).</li>
+        </ol>
+      </section>
+
+      <aside aria-labelledby="copilot-aside-h">
+        <h2 id="copilot-aside-h">Shopping & Tools</h2>
+        <p>Staples: olive oil, kosher salt, garlic, onions, canned tomatoes, dried spices.</p>
+      </aside>
+
+      <section id="copilot-resources" aria-labelledby="copilot-resources-h">
+        <h2 id="copilot-resources-h">Resources & Further Reading</h2>
+        <ul>
+          <li><a href="#">Basic Knife Skills Guide</a></li>
+          <li><a href="#">How to Roast Vegetables</a></li>
+          <li><a href="#">Balancing Flavors: Acid, Salt, Sweet</a></li>
+        </ul>
+      </section>
+
+      <footer role="contentinfo">
+        <p>Version 2 — Copilot-assisted. Copilot prompts are included as comments above. This layout uses semantic tags and accessibility features such as landmarks and a skip link.</p>
+      </footer>
+
+    </main>
+
+    <!-- End of file -->
+
+  </div>
+</body>
+</html>
